@@ -1,0 +1,226 @@
+---
+// Service Area Component
+---
+
+<section class="service-area">
+  <div class="container">
+    <div class="section-header">
+      <h2>対応エリア</h2>
+      <p class="section-subtitle">札幌市全域および周辺地域に対応</p>
+    </div>
+
+    <div class="area-content">
+      <div class="area-map">
+        <div class="map-placeholder">
+          <p>🗺️ Googleマップはここに埋め込み予定</p>
+          <p style="font-size: 0.875rem; opacity: 0.7;">
+            後ほど Google Maps Embed API で対応可能
+          </p>
+        </div>
+      </div>
+
+      <div class="area-list">
+        <h3>札幌市全域</h3>
+        <div class="wards-grid">
+          <div class="ward-item">中央区</div>
+          <div class="ward-item">北区</div>
+          <div class="ward-item">東区</div>
+          <div class="ward-item">白石区</div>
+          <div class="ward-item">厚別区</div>
+          <div class="ward-item">手稲区</div>
+          <div class="ward-item">清田区</div>
+          <div class="ward-item">豊平区</div>
+          <div class="ward-item">南区</div>
+          <div class="ward-item">西区</div>
+        </div>
+
+        <h3 style="margin-top: var(--space-lg);">周辺地域</h3>
+        <div class="nearby-areas">
+          <p>石狩市・江別市・北広島市・野幌・新篠津村 他</p>
+          <p style="font-size: 0.875rem; opacity: 0.7; margin-top: var(--space-sm);">
+            上記エリア以外もお気軽にお問い合わせください
+          </p>
+        </div>
+
+        <div class="area-note">
+          <p>✅ <strong>札幌市内は出張費無料</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .service-area {
+    padding: var(--space-2xl) 0;
+    background: white;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-header h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-dark);
+    opacity: 0.8;
+  }
+
+  .area-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .area-map {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .map-placeholder {
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    padding: var(--space-2xl);
+    text-align: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed var(--color-border);
+    color: var(--color-dark);
+    opacity: 0.7;
+    font-size: 1.5rem;
+  }
+
+  .area-list h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    font-size: 1.125rem;
+  }
+
+  .wards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .ward-item {
+    background-color: var(--color-light);
+    border: 2px solid var(--color-secondary);
+    border-radius: 0.375rem;
+    padding: var(--space-md);
+    text-align: center;
+    font-weight: 500;
+    color: var(--color-primary);
+    transition: var(--transition);
+  }
+
+  .ward-item:hover {
+    background-color: var(--color-secondary);
+    color: white;
+  }
+
+  .nearby-areas {
+    background-color: var(--color-light);
+    border-radius: 0.375rem;
+    padding: var(--space-lg);
+    border-left: 4px solid var(--color-secondary);
+  }
+
+  .nearby-areas p {
+    margin-bottom: 0;
+    color: var(--color-dark);
+  }
+
+  .area-note {
+    background-color: #dcfce7;
+    border: 2px solid #22c55e;
+    border-radius: 0.375rem;
+    padding: var(--space-md);
+    margin-top: var(--space-lg);
+    text-align: center;
+  }
+
+  .area-note p {
+    color: #166534;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .service-area {
+      padding: var(--space-xl) 0;
+    }
+
+    .area-content {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .map-placeholder {
+      min-height: 300px;
+      font-size: 1.125rem;
+    }
+
+    .wards-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-sm);
+    }
+
+    .area-list h3 {
+      font-size: 1rem;
+      margin-top: var(--space-lg);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .service-area {
+      padding: var(--space-lg) 0;
+    }
+
+    .area-content {
+      gap: var(--space-md);
+    }
+
+    .map-placeholder {
+      min-height: 250px;
+      padding: var(--space-lg);
+      font-size: 1rem;
+    }
+
+    .wards-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-xs);
+    }
+
+    .ward-item {
+      padding: var(--space-sm);
+      font-size: 0.875rem;
+    }
+
+    .nearby-areas {
+      padding: var(--space-md);
+    }
+
+    .nearby-areas p {
+      font-size: 0.85rem;
+    }
+
+    .area-note {
+      padding: var(--space-sm);
+    }
+
+    .area-note p {
+      font-size: 0.9rem;
+    }
+  }
+</style>

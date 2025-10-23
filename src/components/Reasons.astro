@@ -1,0 +1,147 @@
+---
+// Why Choose Us Section Component
+interface Reason {
+  title: string;
+  description: string;
+  metric?: string;
+}
+
+interface Props {
+  reasons?: Reason[];
+}
+
+const defaultReasons: Reason[] = [
+  {
+    title: "実績",
+    description: "10年以上の実績。多数の企業から信頼を得ています。",
+    metric: "1,000+",
+  },
+  {
+    title: "スピード対応",
+    description: "お急ぎの案件も対応可能。最短で翌日対応も可能です。",
+    metric: "最短24h",
+  },
+  {
+    title: "地域特化",
+    description: "地元を熟知したスタッフが、丁寧な対応を心がけます。",
+    metric: "3都県",
+  },
+  {
+    title: "適切処理",
+    description: "法律に遵守した確実な処理。環境への配慮も徹底。",
+    metric: "100%",
+  },
+];
+
+const { reasons = defaultReasons } = Astro.props;
+---
+
+<section class="reasons">
+  <div class="container">
+    <div class="section-header">
+      <h2>選ばれる理由</h2>
+      <p class="section-subtitle">信頼と実績で、多くの企業から選ばれています</p>
+    </div>
+
+    <div class="grid grid-reasons">
+      {reasons.map((reason) => (
+        <div class="reason-card">
+          {reason.metric && (
+            <div class="reason-metric">{reason.metric}</div>
+          )}
+          <h3>{reason.title}</h3>
+          <p>{reason.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .reasons {
+    padding: var(--space-2xl) 0;
+    background: white;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-header h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-dark);
+    opacity: 0.8;
+  }
+
+  .grid-reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .reason-card {
+    text-align: center;
+    padding: var(--space-lg);
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+  }
+
+  .reason-card:hover {
+    border-color: var(--color-secondary);
+    transform: translateY(-4px);
+  }
+
+  .reason-metric {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-sm);
+  }
+
+  .reason-card h3 {
+    color: var(--color-primary);
+    font-size: 1.125rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .reason-card p {
+    color: var(--color-dark);
+    opacity: 0.7;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .reasons {
+      padding: var(--space-xl) 0;
+    }
+
+    .grid-reasons {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .reason-card {
+      padding: var(--space-md);
+    }
+
+    .reason-metric {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      .grid-reasons {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+</style>

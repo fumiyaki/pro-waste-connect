@@ -1,0 +1,367 @@
+---
+// Pricing Component
+---
+
+<section class="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2>料金目安</h2>
+      <p class="section-subtitle">明朗会計・追加費用なし。見積もり無料です。</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3 class="pricing-title">軽トラック積み放題プラン</h3>
+        <div class="pricing-amount">
+          <span class="price">¥9,800</span>
+          <span class="unit">〜（税込）</span>
+        </div>
+        
+        <p class="pricing-description">
+          少量の廃材、木くず、コンクリート片、庭木くず、建設廃材など
+        </p>
+
+        <ul class="pricing-features">
+          <li>✓ 軽トラック1台分</li>
+          <li>✓ 積み放題</li>
+          <li>✓ 札幌市内出張費無料</li>
+          <li>✓ 見積もり無料</li>
+          <li>✓ 追加費用なし</li>
+        </ul>
+
+        <a href="tel:011-123-4567" class="btn btn-primary">電話で相談</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="popular-badge">最も利用される</div>
+        
+        <h3 class="pricing-title">2tトラックプラン</h3>
+        <div class="pricing-amount">
+          <span class="price">¥24,800</span>
+          <span class="unit">〜（税込）</span>
+        </div>
+        
+        <p class="pricing-description">
+          大量の建設廃材、店舗片付け、引越し廃棄物など
+        </p>
+
+        <ul class="pricing-features">
+          <li>✓ 2トントラック1台分</li>
+          <li>✓ 積み放題</li>
+          <li>✓ 札幌市内出張費無料</li>
+          <li>✓ 見積もり無料</li>
+          <li>✓ 追加費用なし</li>
+        </ul>
+
+        <a href="https://line.me/R/ti/p/@sanpai_sapporo" class="btn btn-accent">LINEで見積もり</a>
+      </div>
+
+      <div class="pricing-card">
+        <h3 class="pricing-title">カスタムプラン</h3>
+        <div class="pricing-amount">
+          <span class="price">要見積もり</span>
+        </div>
+        
+        <p class="pricing-description">
+          大型トラック、複数台回収、定期回収など特殊なご要望
+        </p>
+
+        <ul class="pricing-features">
+          <li>✓ 複数台対応</li>
+          <li>✓ 定期回収対応</li>
+          <li>✓ 大型トラック</li>
+          <li>✓ 法人向けプラン</li>
+          <li>✓ カスタム対応</li>
+        </ul>
+
+        <a href="#contact" class="btn btn-primary">メールで問い合わせ</a>
+      </div>
+    </div>
+
+    <div class="pricing-notes">
+      <h3>ご利用の流れ</h3>
+      <div class="notes-grid">
+        <div class="note-item">
+          <div class="note-number">1</div>
+          <div class="note-content">
+            <strong>お電話またはLINEでご相談</strong>
+            <p>廃棄物の種類と量をお聞きします</p>
+          </div>
+        </div>
+
+        <div class="note-item">
+          <div class="note-number">2</div>
+          <div class="note-content">
+            <strong>無料見積もり</strong>
+            <p>金額をご提示します。この時点でキャンセル可能</p>
+          </div>
+        </div>
+
+        <div class="note-item">
+          <div class="note-number">3</div>
+          <div class="note-content">
+            <strong>ご来訪・回収</strong>
+            <p>最短で当日または翌日対応可能</p>
+          </div>
+        </div>
+
+        <div class="note-item">
+          <div class="note-number">4</div>
+          <div class="note-content">
+            <strong>処理票発行</strong>
+            <p>法令遵守の処理票をお渡しします</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing {
+    padding: var(--space-2xl) 0;
+    background-color: var(--color-light);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-header h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-dark);
+    opacity: 0.8;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .pricing-card {
+    background: white;
+    padding: var(--space-xl);
+    border-radius: 0.75rem;
+    border: 2px solid var(--color-border);
+    position: relative;
+    transition: var(--transition);
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-secondary);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .pricing-card.featured {
+    border-color: var(--color-secondary);
+    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.2);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-secondary);
+    color: white;
+    padding: var(--space-xs) var(--space-lg);
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .pricing-title {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .pricing-amount {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  .price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+  }
+
+  .unit {
+    font-size: 0.875rem;
+    color: var(--color-dark);
+    opacity: 0.7;
+  }
+
+  .pricing-description {
+    color: var(--color-dark);
+    opacity: 0.7;
+    margin-bottom: var(--space-lg);
+    font-size: 0.95rem;
+  }
+
+  .pricing-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .pricing-features li {
+    color: var(--color-dark);
+    opacity: 0.8;
+  }
+
+  .pricing-card .btn {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .pricing-notes {
+    background: white;
+    padding: var(--space-xl);
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+  }
+
+  .pricing-notes h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-lg);
+  }
+
+  .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .note-item {
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  .note-number {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.125rem;
+  }
+
+  .note-content strong {
+    color: var(--color-primary);
+  }
+
+  .note-content p {
+    margin: var(--space-xs) 0 0 0;
+    color: var(--color-dark);
+    opacity: 0.7;
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 768px) {
+    .pricing {
+      padding: var(--space-xl) 0;
+    }
+
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .pricing-card {
+      padding: var(--space-lg);
+    }
+
+    .pricing-card.featured {
+      box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+    }
+
+    .notes-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .note-item {
+      gap: var(--space-md);
+    }
+
+    .note-number {
+      min-width: 36px;
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .pricing {
+      padding: var(--space-lg) 0;
+    }
+
+    .pricing-grid {
+      gap: var(--space-md);
+    }
+
+    .pricing-card {
+      padding: var(--space-md);
+    }
+
+    .pricing-title {
+      font-size: 1.1rem;
+    }
+
+    .price {
+      font-size: 2rem;
+    }
+
+    .unit {
+      font-size: 0.8rem;
+    }
+
+    .pricing-description {
+      font-size: 0.9rem;
+    }
+
+    .pricing-features li {
+      font-size: 0.9rem;
+    }
+
+    .pricing-notes {
+      padding: var(--space-lg);
+    }
+
+    .pricing-notes h3 {
+      font-size: 1rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .note-content strong {
+      font-size: 0.95rem;
+    }
+
+    .note-content p {
+      font-size: 0.8rem;
+    }
+  }
+</style>

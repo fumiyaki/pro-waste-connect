@@ -1,0 +1,176 @@
+---
+// Testimonials Component
+---
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2>お客様の声</h2>
+      <p class="section-subtitle">多くのお客様にご利用いただいています</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-category">解体・リフォーム</p>
+        </div>
+        <p class="testimonial-text">
+          「自宅解体後の木くずを回収してもらいました。価格も明朗で助かりました。翌日対応してもらえたので、スケジュール通りに進みました。」
+        </p>
+        <p class="testimonial-author">札幌市北区・50代男性</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-category">庭木・外構DIY</p>
+        </div>
+        <p class="testimonial-text">
+          「庭の伐採くずを翌日に回収してもらい、助かりました！追加費用も一切なく、見積もり通りで安心できました。」
+        </p>
+        <p class="testimonial-author">札幌市清田区・30代女性</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-category">店舗閉店</p>
+        </div>
+        <p class="testimonial-text">
+          「カフェ閉店時の廃棄物処分でお世話になりました。少量でも対応してくれて、手続きも簡単でした。個人でも安心して頼めます。」
+        </p>
+        <p class="testimonial-author">札幌市中央区・40代女性</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-category">一般的な廃棄物</p>
+        </div>
+        <p class="testimonial-text">
+          「LINEで問い合わせたら、即座に見積もりをもらえました。対応が早くて、電話対応も丁寧。リピーターになりそうです。」
+        </p>
+        <p class="testimonial-author">札幌市南区・50代男性</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-category">リフォーム廃材</p>
+        </div>
+        <p class="testimonial-text">
+          「キッチンリフォーム後の廃材処分で利用。軽トラ1台分から対応してくれるのが助かります。個人客でも嫌な顔をしないのが良いです。」
+        </p>
+        <p class="testimonial-author">札幌市東区・60代男性</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-rating">★★★★★</div>
+          <p class="testimonial-category">法令遵守</p>
+        </div>
+        <p class="testimonial-text">
+          「許可業者ということで安心して頼めました。処理票もしっかり発行してくれて、コンプライアンス的にも問題ありません。」
+        </p>
+        <p class="testimonial-author">札幌市中央区・建設業者A</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: var(--space-2xl) 0;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-header h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-dark);
+    opacity: 0.8;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .testimonial-card {
+    background: white;
+    padding: var(--space-lg);
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-md);
+  }
+
+  .testimonial-rating {
+    color: #fbbf24;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .testimonial-category {
+    background-color: var(--color-light);
+    color: var(--color-secondary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 0.25rem;
+    margin-bottom: 0;
+  }
+
+  .testimonial-text {
+    color: var(--color-dark);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    color: var(--color-dark);
+    opacity: 0.7;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .testimonials {
+      padding: var(--space-xl) 0;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    .testimonial-card {
+      padding: var(--space-md);
+    }
+  }
+</style>

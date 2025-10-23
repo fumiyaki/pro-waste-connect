@@ -1,0 +1,10 @@
+{
+  "runners": ["axe", "htmlcs"],
+  "standard": "WCAG2AA",
+  "wait": 1000,
+  "timeout": 10000,
+  "chromeLaunchConfig": {
+    "args": ["--no-sandbox"]
+  },
+  "urls": ["http://localhost:3000"]
+}

@@ -1,0 +1,343 @@
+---
+// Contact Form Component (Formspree Integration)
+---
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2>お問い合わせ</h2>
+      <p class="section-subtitle">電話・LINE・メールのいずれからでもご相談ください。</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <div class="contact-quick">
+        <h3>お急ぎの場合はこちら</h3>
+        
+        <a href="tel:011-123-4567" class="contact-button contact-button-phone">
+          <span class="contact-button-icon">📞</span>
+          <span class="contact-button-text">
+            <span class="contact-button-label">電話で相談</span>
+            <span class="contact-button-number">011-123-4567</span>
+          </span>
+        </a>
+
+        <a href="https://line.me/R/ti/p/@sanpai_sapporo" class="contact-button contact-button-line">
+          <span class="contact-button-icon">💬</span>
+          <span class="contact-button-text">
+            <span class="contact-button-label">LINEで見積もり</span>
+            <span class="contact-button-number">LINE公式アカウント</span>
+          </span>
+        </a>
+
+        <div class="contact-hours">
+          <p class="hours-title">営業時間</p>
+          <p class="hours-content">
+            平日：9:00 - 17:00<br />
+            土曜：9:00 - 13:00<br />
+            日祝日：定休
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <h3>メールで問い合わせ</h3>
+        
+        <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID" class="contact-form">
+          <div class="form-group">
+            <label for="name">お名前 <span class="required">*</span></label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required 
+              placeholder="山田太郎"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="company">会社名・屋号</label>
+            <input 
+              type="text" 
+              id="company" 
+              name="company" 
+              placeholder="○○建設（記入不要な場合は空白でOK）"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">メールアドレス <span class="required">*</span></label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="example@example.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">電話番号 <span class="required">*</span></label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              required 
+              placeholder="090-1234-5678"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="category">ご利用内容 <span class="required">*</span></label>
+            <select id="category" name="category" required>
+              <option value="">選択してください</option>
+              <option value="解体・リフォーム廃材">解体・リフォーム廃材</option>
+              <option value="庭木・外構DIY">庭木・外構DIY</option>
+              <option value="店舗・事務所廃棄物">店舗・事務所廃棄物</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">詳しい内容をお聞かせください <span class="required">*</span></label>
+            <textarea 
+              id="message" 
+              name="message" 
+              required 
+              placeholder="廃棄物の種類、量、ご希望の日時などをご記入ください。"
+              rows="5"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox">
+              <input type="checkbox" name="privacy" required />
+              <span>プライバシーポリシーに同意します</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-submit">
+            送信する
+          </button>
+
+          <p class="form-note">
+            ※ 送信いただいたメールは、回答のためのみに使用いたします。<br />
+            迷惑メール対策をしている場合は、`@formspree.io` からのメールを許可してください。
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding: var(--space-2xl) 0;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-header h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-dark);
+    opacity: 0.8;
+  }
+
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .contact-quick {
+    background: white;
+    padding: var(--space-xl);
+    border-radius: 0.75rem;
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .contact-quick h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-lg);
+  }
+
+  .contact-button {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: var(--transition);
+    color: white;
+    font-weight: 600;
+  }
+
+  .contact-button-phone {
+    background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+  }
+
+  .contact-button-phone:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 16px rgba(0, 82, 204, 0.3);
+  }
+
+  .contact-button-line {
+    background: linear-gradient(135deg, #00b900 0%, #00d600 100%);
+  }
+
+  .contact-button-line:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 16px rgba(0, 185, 0, 0.3);
+  }
+
+  .contact-button-icon {
+    font-size: 1.75rem;
+  }
+
+  .contact-button-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-button-label {
+    font-size: 0.875rem;
+    opacity: 0.9;
+  }
+
+  .contact-button-number {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .contact-hours {
+    background-color: var(--color-light);
+    padding: var(--space-lg);
+    border-radius: 0.375rem;
+    margin-top: var(--space-lg);
+  }
+
+  .hours-title {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+  }
+
+  .hours-content {
+    color: var(--color-dark);
+    line-height: 1.8;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+  }
+
+  .contact-form-container {
+    background: white;
+    padding: var(--space-xl);
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .contact-form-container h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-lg);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .form-group label {
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .required {
+    color: #ef4444;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    font-family: var(--font-sans);
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  .btn-submit {
+    margin-top: var(--space-md);
+  }
+
+  .form-note {
+    font-size: 0.75rem;
+    color: var(--color-dark);
+    opacity: 0.6;
+    margin-top: var(--space-md);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .contact {
+      padding: var(--space-xl) 0;
+    }
+
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .contact-quick,
+    .contact-form-container {
+      padding: var(--space-lg);
+    }
+  }
+</style>

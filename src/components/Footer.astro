@@ -1,0 +1,209 @@
+---
+// Footer Component
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section footer-about">
+        <h4>札幌産業廃棄物サービス株式会社</h4>
+        <p class="license">産業廃棄物収集運搬業 北海道知事許可 第000000号</p>
+        
+        <div class="footer-links">
+          <a href="#" class="footer-link">プライバシーポリシー</a>
+          <a href="#" class="footer-link">利用規約</a>
+          <a href="#" class="footer-link">サイトマップ</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>住所</h4>
+        <p class="footer-text">
+          〒060-0000<br />
+          北海道札幌市中央区○○1丁目2-3<br />
+          <span style="opacity: 0.7; font-size: 0.875rem;">（仮住所）</span>
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>お問い合わせ</h4>
+        <p class="footer-text">
+          <a href="tel:011-123-4567">011-123-4567</a><br />
+          <a href="mailto:info@sapporo-sanpai.jp">info@sapporo-sanpai.jp</a>
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>営業時間</h4>
+        <p class="footer-text">
+          平日：9:00 - 17:00<br />
+          土曜：9:00 - 13:00<br />
+          日祝日：定休
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h4>SNS</h4>
+        <div class="footer-social">
+          <a href="https://line.me/R/ti/p/@sanpai_sapporo" class="social-icon" title="LINE">
+            💬
+          </a>
+          <span class="social-text">LINE公式アカウント</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; 2025 札幌産業廃棄物サービス株式会社 All Rights Reserved.
+      </p>
+      <div class="footer-badges">
+        <span class="badge">Powered by Astro</span>
+        <span class="badge">Hosted on Cloudflare Pages</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--space-2xl) 0 var(--space-lg);
+    margin-top: var(--space-2xl);
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .footer-section h4 {
+    color: white;
+    margin-bottom: var(--space-md);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .footer-about h4 {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .license {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+  }
+
+  .footer-text {
+    opacity: 0.9;
+    line-height: 1.8;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+  }
+
+  .footer-text a {
+    color: white;
+    transition: var(--transition);
+  }
+
+  .footer-text a:hover {
+    opacity: 0.7;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+  }
+
+  .footer-link {
+    color: white;
+    opacity: 0.85;
+    transition: var(--transition);
+    font-size: 0.875rem;
+  }
+
+  .footer-link:hover {
+    opacity: 1;
+  }
+
+  .footer-social {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .social-icon {
+    font-size: 1.75rem;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .social-text {
+    font-size: 0.875rem;
+    opacity: 0.9;
+  }
+
+  .footer-divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: var(--space-lg) 0;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-badges {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      padding: var(--space-xl) 0 var(--space-md);
+      margin-top: var(--space-xl);
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .footer-bottom {
+      font-size: 0.85rem;
+    }
+
+    .footer-badges {
+      gap: var(--space-sm);
+    }
+  }
+</style>

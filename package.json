@@ -1,0 +1,24 @@
+{
+  "name": "pro-waste-connect",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "biome lint --apply .",
+    "format": "biome format --write .",
+    "check": "biome check .",
+    "a11y": "pa11y-ci --config .pa11yrc.json || true"
+  },
+  "dependencies": {
+    "astro": "^5.13.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.7",
+    "@types/node": "^20.0.0",
+    "lefthook": "^2.0.0",
+    "pa11y": "^9.0.1"
+  }
+}

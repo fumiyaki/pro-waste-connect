@@ -1,0 +1,164 @@
+---
+// Services Section Component - 3 Target Services
+---
+
+<section class="services">
+  <div class="container">
+    <div class="section-header">
+      <h2>サービス内容</h2>
+      <p class="section-subtitle">あなたのニーズに合わせた産廃処理をご提供</p>
+    </div>
+
+    <div class="grid grid-services">
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>解体・リフォーム後の廃材回収</h3>
+        <p>
+          木くず・石膏ボード・断熱材など、少量でも回収OK。
+          解体業者を通さず直接依頼できます。
+        </p>
+        <ul class="service-list">
+          <li>木材・廃木</li>
+          <li>石膏ボード</li>
+          <li>断熱材</li>
+          <li>その他建設廃材</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌳</div>
+        <h3>庭木・外構DIYの廃棄物</h3>
+        <p>
+          庭木、伐採くず、コンクリート片など、少量でも軽トラで回収。
+          個人の方も安心。
+        </p>
+        <ul class="service-list">
+          <li>樹木・剪定枝</li>
+          <li>コンクリート片</li>
+          <li>土・砕石</li>
+          <li>ブロック</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏪</div>
+        <h3>店舗・事務所・カフェなど</h3>
+        <p>
+          少量の産廃、閉店・移転時の片付けにも対応。
+          契約不要の単発回収OK。
+        </p>
+        <ul class="service-list">
+          <li>飲食店の廃油</li>
+          <li>段ボール・廃紙</li>
+          <li>閉店時の片付け</li>
+          <li>引越し時の廃棄物</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: var(--space-2xl) 0;
+    background-color: var(--color-light);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-header h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-dark);
+    opacity: 0.8;
+  }
+
+  .grid-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .service-card {
+    background: white;
+    padding: var(--space-xl);
+    border-radius: 0.75rem;
+    border: 2px solid var(--color-border);
+    transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-secondary);
+  }
+
+  .service-icon {
+    font-size: 3.5rem;
+    margin-bottom: var(--space-md);
+    display: block;
+  }
+
+  .service-card h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    font-size: 1.25rem;
+  }
+
+  .service-card p {
+    color: var(--color-dark);
+    opacity: 0.7;
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+  }
+
+  .service-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .service-list li {
+    padding-left: var(--space-md);
+    position: relative;
+    color: var(--color-dark);
+    opacity: 0.75;
+  }
+
+  .service-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .services {
+      padding: var(--space-xl) 0;
+    }
+
+    .grid-services {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .service-card {
+      padding: var(--space-lg);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+    }
+  }
+</style>

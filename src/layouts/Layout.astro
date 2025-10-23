@@ -1,0 +1,195 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "産業廃棄物処理を信頼と実績で" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    
+    <!-- Global Styles -->
+    <style is:global>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-primary: #1e3a8a;
+        --color-secondary: #3b82f6;
+        --color-accent: #ff6b35;
+        --color-light: #f8fafc;
+        --color-dark: #1f2937;
+        --color-border: #e5e7eb;
+        
+        --space-xs: 0.5rem;
+        --space-sm: 1rem;
+        --space-md: 1.5rem;
+        --space-lg: 2rem;
+        --space-xl: 3rem;
+        --space-2xl: 4rem;
+        
+        --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        
+        --transition: all 0.3s ease-in-out;
+      }
+
+      html {
+        font-size: 16px;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        color: var(--color-dark);
+        line-height: 1.6;
+        background-color: #ffffff;
+      }
+
+      /* Typography */
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: var(--space-md);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin-bottom: var(--space-md);
+      }
+
+      /* Links */
+      a {
+        color: var(--color-secondary);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      a:hover {
+        color: var(--color-accent);
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        padding: var(--space-sm) var(--space-lg);
+        border-radius: 0.5rem;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+        text-decoration: none;
+      }
+
+      .btn-primary {
+        background-color: var(--color-primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--color-secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
+      }
+
+      .btn-accent {
+        background-color: var(--color-accent);
+        color: white;
+      }
+
+      .btn-accent:hover {
+        background-color: #ff5722;
+        transform: translateY(-2px);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        h3 {
+          font-size: 1.25rem;
+        }
+
+        html {
+          font-size: 14px;
+        }
+      }
+
+      /* Utility Classes */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--space-lg);
+      }
+
+      .section {
+        padding: var(--space-2xl) 0;
+      }
+
+      .grid {
+        display: grid;
+        gap: var(--space-lg);
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      .flex {
+        display: flex;
+        gap: var(--space-md);
+      }
+
+      .text-center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <slot name="header" />
+    </header>
+    
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <slot name="footer" />
+    </footer>
+
+    <!-- Microsoft Clarity -->
+    <script>
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "YOUR_CLARITY_ID");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+version: 2
+
+commit-msg:
+  commands:
+    commit-msg-check:
+      run: |
+        MSG=$(cat {0})
+        if [[ ! $MSG =~ ^(feat|fix|docs|style|refactor|perf|test|chore|ci)(\(.+\))?:\ .+ ]]; then
+          echo "❌ Commit message must follow format: type(scope): description"
+          echo "   Example: feat(lp): add hero section"
+          exit 1
+        fi
+
+pre-commit:
+  commands:
+    biome-check:
+      run: npx biome check .
