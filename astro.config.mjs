@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import partytown from "@astrojs/partytown";
 
 export default defineConfig({
   // Cloudflare Pages は静的サイトを完全サポート
@@ -19,5 +20,12 @@ export default defineConfig({
     syntaxHighlight: "shiki",
   },
 
-  integrations: [],
+  integrations: [
+    partytown({
+      // メインスレッドをブロックするスクリプトを指定
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+  ],
 });

@@ -206,10 +206,13 @@ const { title, description = "産業廃棄物処理を信頼と実績で" } = As
       })(window, document, "clarity", "script", "YOUR_CLARITY_ID");
     </script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8MC3F6JNLM"
+    <!-- Google Analytics (via Partytown - off-main-thread) -->
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8MC3F6JNLM"
     ></script>
-    <script>
+    <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         // eslint-disable-next-line no-undef

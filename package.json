@@ -14,6 +14,7 @@
     "a11y": "pa11y-ci --config .pa11yrc.json || true"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.1.4",
     "astro": "^5.13.0"
   },
   "devDependencies": {
