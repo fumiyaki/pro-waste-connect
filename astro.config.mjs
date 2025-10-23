@@ -22,9 +22,11 @@ export default defineConfig({
 
   integrations: [
     partytown({
-      // メインスレッドをブロックするスクリプトを指定
       config: {
-        forward: ["dataLayer.push"],
+        // Google Analytics データレイヤー操作をメインスレッドに転送
+        forward: ["dataLayer.push", "gtag"],
+        // Partytown debug モードを有効（開発時の確認用）
+        debug: false,
       },
     }),
   ],
