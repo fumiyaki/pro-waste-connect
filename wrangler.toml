@@ -5,11 +5,3 @@ compatibility_date = "2024-12-16"
 [build]
 command = "pnpm build"
 cwd = "./"
-watch_paths = ["src/**/*.{astro,ts,tsx,jsx}"]
-
-[build.upload]
-format = "service-worker"
-
-# 環境変数（本番環境）
-[env.production]
-# Google広告、Microsoft Clarityなどのキーはダッシュボードで管理
