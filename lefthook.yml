@@ -13,5 +13,7 @@ commit-msg:
 
 pre-commit:
   commands:
-    biome-check:
-      run: npx biome check .
+    eslint-check:
+      run: npx eslint . --ext .js,.ts,.astro
+    prettier-check:
+      run: npx prettier --check .

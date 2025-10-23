@@ -1,0 +1,6 @@
+node_modules/
+dist/
+build/
+.astro/
+*.lock
+pnpm-lock.yaml

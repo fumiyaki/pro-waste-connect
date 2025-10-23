@@ -44,15 +44,15 @@ const { reasons = defaultReasons } = Astro.props;
     </div>
 
     <div class="grid grid-reasons">
-      {reasons.map((reason) => (
-        <div class="reason-card">
-          {reason.metric && (
-            <div class="reason-metric">{reason.metric}</div>
-          )}
-          <h3>{reason.title}</h3>
-          <p>{reason.description}</p>
-        </div>
-      ))}
+      {
+        reasons.map((reason) => (
+          <div class="reason-card">
+            {reason.metric && <div class="reason-metric">{reason.metric}</div>}
+            <h3>{reason.title}</h3>
+            <p>{reason.description}</p>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
