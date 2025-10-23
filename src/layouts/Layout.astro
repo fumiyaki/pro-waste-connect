@@ -203,22 +203,27 @@ const { title, description = "産業廃棄物処理を信頼と実績で" } = As
         t.src = "https://www.clarity.ms/tag/" + i;
         y = l.getElementsByTagName(r)[0];
         y.parentNode.insertBefore(t, y);
-      })(window, document, "clarity", "script", "YOUR_CLARITY_ID");
+      })(window, document, "clarity", "script", "tujld71zhx");
     </script>
 
     <!-- Google Analytics with Partytown optimization -->
+    <!-- Load gtag.js on main thread (required for proper functioning) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-8MC3F6JNLM"
     ></script>
-    <script>
-      // Initialize Google Analytics on main thread
+    <!-- Initialize via Partytown to offload tracking to web worker -->
+    <script type="text/partytown">
+      // Initialize Google Analytics - explicitly assign gtag to window for Partytown forwarding
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
+      // Must assign gtag as function variable (not declaration) for Partytown to forward correctly
+      window.gtag = function gtag() {
         // eslint-disable-next-line no-undef
         dataLayer.push(arguments);
-      }
+      };
+      // eslint-disable-next-line no-undef
       gtag("js", new Date());
+      // eslint-disable-next-line no-undef
       gtag("config", "G-8MC3F6JNLM");
     </script>
   </body>
