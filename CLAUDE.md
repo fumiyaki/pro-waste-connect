@@ -13,6 +13,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Primary Goal: Maximize inquiries, phone calls, and LINE referrals
 - Cost: Hosting is free (Cloudflare Pages), forms via Formspree, analytics via Microsoft Clarity
 
+## Collaboration Notes
+
+会話ログを受け取ったら、要点・決定事項・参考資料等を抽出して2025/XX/XX 決定事項みたいな見出しは作らずに `docs/spec.md` の既存構造に合わせて反映する。必要に応じて見出しを追加し、仕様書全体の一貫性を保つこと。
+
 ## Architecture
 
 ### High-Level Structure
