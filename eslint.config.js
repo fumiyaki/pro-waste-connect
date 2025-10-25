@@ -12,6 +12,7 @@ export default [
       "dist/**",
       ".astro/**",
       "build/**",
+      ".wrangler/**",
       "pnpm-lock.yaml",
       ".eslintrc.cjs",
       ".prettierrc.cjs",
@@ -52,6 +53,22 @@ export default [
     ...a11y.flatConfigs.recommended,
     rules: {
       "import/no-unresolved": "off",
+    },
+  },
+  {
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+      },
+      globals: {
+        console: "readonly",
+        Response: "readonly",
+        Request: "readonly",
+        atob: "readonly",
+      },
     },
   },
 ];
