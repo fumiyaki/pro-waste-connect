@@ -143,7 +143,7 @@ npm run build
 - Formspree は **無料プラン**でも機能十分ですが、問い合わせ数が多い場合は有料プランへのアップグレード検討
 - Cloudflare DNS の設定時に **CNAME レコード**を正しく設定（ドメイン設定参照）
 - Microsoft Clarity のトラッキングコードは **全ページ** に埋め込み（分析精度向上）
-- Cloudflare Pages の機能で **Basic 認証**を有効化する場合は、`functions/_middleware.ts` をデプロイしたうえで Pages の **Variables / Secrets** に `BASIC_AUTH_USER` と `BASIC_AUTH_PASS` を設定し、`wrangler pages dev --binding BASIC_AUTH_USER=your-user --binding BASIC_AUTH_PASS=your-pass` を使うとローカルでも認証の挙動を確認可能。
+- Cloudflare Pages の機能で **Basic 認証**を有効化する場合は、`functions/_middleware.ts` をデプロイしたうえで Pages の **Variables / Secrets** に `BASIC_AUTH_USER` と `BASIC_AUTH_PASS` を設定し、`pnpm build` で `dist/` を生成してから `wrangler pages dev --binding BASIC_AUTH_USER=your-user --binding BASIC_AUTH_PASS=your-pass` を使うとローカルでも認証の挙動を確認可能。
 
 ---
 
